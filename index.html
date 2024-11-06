@@ -94,7 +94,7 @@
     <li>Напитки</li>
 </ol>
 <h3 id="head1">Новинки:</h3>
-<div class="photo1"><img src="./торт1.jpeg" alt="Торт "Ромашка"" width="400" height="400" title="торт "Ромашка"</div>
+<div class="photo1"><img src="./торт1.jpeg" alt="Торт "Ромашка"" width="400" height="400" title="торт "Ромашка""</div>
 <div class="photo2"><img src="./торт2.jpeg"  alt="Эклеры Фисташковые" width="400" height="400" title="Эклеры"</div>
 <div class="photo3"><img src="./торт3.jpeg"  alt="Тарталетка с пеканом" width="400" height="400" title="Тарталетка"</div>
 <div class="name1"><p class="style1">Торт "Ромашка"</p></div>
@@ -155,13 +155,14 @@
 </div>
 <hr>
 <div class="login">
-    <form name="registration" action="https://www.bing.com/search?" method="post" id="UserEnter" name="UserEnter" target="_blank">
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+   
+        <input type="hidden"  name="q" value="search?">
+            <p><input type="hidden"  name="q" value="search"></p>
         <b id="head3"><h3>Форма регистрации</h3></b>
         <p>Фамилия</p>
         <input type="text" name="text">
-    
         <p>Имя</p><input type="text" name="text">
-       
         <p>Отчество</p>
         <input type="text" name="text">
   
@@ -177,12 +178,15 @@
         <p>Почта</p><input type="text" name="text">
         <br>
         <p>Пароль</p><input type="password" id="password" name="password"
+        <input type="hidden" name="function"  value="page">
+        <input type="hidden" name="page_id"  value="3">
         <br><br><br>
         <button class="button" type="submit">Зарегистрироваться</button>
     </form>
 </div>
 <div class="login2">
-    <form action="https://www.bing.com/search?" method="POST">
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <input type="hidden"  name="q" value="search?">
         <b id="head3"><h3>Форма обратной связи</h3></b>   
         <input type="hidden" name="form_type" value="feedback">
 
@@ -213,6 +217,8 @@
         <label for="password">Пароль</label><br>
         <input type="password" id="password" name="password" required>
 <br><br>
+<input type="hidden" name="function"  value="page">
+        <input type="hidden" name="page_id"  value="3">
         <button class="button" type="submit">Отправить</button>
     </form>
 </div>
