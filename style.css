@@ -1,82 +1,31 @@
-
-.body {
+/* Основные стили */
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #FFFAF0;
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-h1 {
-    font-family: 'Arial', sans-serif; 
-    font-size: 36px; 
-    color: #2c3e50; 
-    font-weight: bold; 
 }
 
-h2 {
-    font-family: 'Verdana', sans-serif;
-    font-size: 30px;
-    color: #34495e;
-    font-weight: normal;
+h1, h3 {
+    text-align: center;
 }
 
-h3 {
-    font-family: 'Georgia', serif;
-    font-size: 24px;
-    color: #7f8c8d;
-    font-style: italic; 
-}
-.style1 {
-    font-family: 'Arial', serif;
-    font-size: 25px;
-    color: #2c3e50;
-    line-height: 1.5; 
-}
-.style2 {
-    font-family: 'Courier New', sans-serif;
-    font-size: 18px;
-    color: #000000c3;
-    line-height: 1.5;  
-}
-.style3 {
-    font-family: 'Dancing Script', sans-serif;
-    font-size: 16px;
-    color: #000000c3;
-    font-weight: normal;   
-    font-style: italic;
-}
-a {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    color: #2980b9; 
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline; 
-}
-ul {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    color: #594f3d;
-}
-ol {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    color: #594f3d;   
-}
 nav {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .button {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #e5d7b6; 
+    background-color: #e5d7b6;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -84,29 +33,24 @@ nav {
 }
 
 .button:hover {
-    background-color: #cbbd8b; 
+    background-color: #cbbd8b;
 }
-.button1 {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #c1c1c1; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.button1:hover {
-    background-color: grey; 
-}
-.table {
+
+a {
     font-family: 'Arial', sans-serif;
     font-size: 18px;
-    color: #000000;
+    color: #2980b9;
+    text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
 .table-container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -114,9 +58,8 @@ nav {
 }
 
 table {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
 }
 
 th, td {
@@ -127,24 +70,13 @@ th, td {
 tr:hover {
     background-color: #c1c1c1;
 }
-.login, .login2 {
-    background-color: white;
-    padding: 20px;
-    border-radius: 0px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 500px;
-}
-
-.registration{
-    display: flex;
-    flex-direction: column;
-}
 
 input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
+    width: 100%;
 }
 
 input:focus {
@@ -152,3 +84,100 @@ input:focus {
     outline: none;
 }
 
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Адаптивные стили для планшетов и мобильных устройств */
+@media screen and (max-width: 768px) {
+    .photo1, .photo2, .photo3 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .name1, .name2, .name3 {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .price1, .price2, .price3 {
+        text-align: center;
+    }
+    .text, .remark {
+        margin-top: 20px;
+    }
+    .table-container {
+        width: 100%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    .button {
+        width: 100%;
+        font-size: 14px;
+    }
+    .login, .login2 {
+        width: 100%;
+        padding: 10px;
+    }
+    .registration input {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .table-container {
+        padding: 10px;
+    }
+    .login, .login2 {
+        padding: 15px;
+    }
+    .remark ul {
+        padding-left: 20px;
+    }
+    .login input, .login2 input {
+        font-size: 14px;
+    }
+    .photo1, .photo2, .photo3 {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+/* Для мобильных устройств */
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .table-container {
+        padding: 8px;
+    }
+    .login input, .login2 input {
+        font-size: 12px;
+    }
+    .remark ul {
+        padding-left: 20px;
+    }
+}
